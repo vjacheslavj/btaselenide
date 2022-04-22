@@ -26,5 +26,11 @@ public class TestBta {
         celojumuPage.lookingForIzvelValstiBtnPopupWindow();
         celojumuPage.clickEnterText();
         celojumuPage.clickOnIndija();
+        String selectedCountry = celojumuPage.getSelectedCountryText();
+        celojumuPage.clickOnPielietotBtn();
+        celojumuPage.lookingForAktivitatesField();
+        celojumuPage.lookingForSportsBtn();
+        String selectedAktivitate = celojumuPage.getSelectedAktivitateText();
+        celojumuPage.loogingForSanemtPiedavajumuBtn();
     }
 }

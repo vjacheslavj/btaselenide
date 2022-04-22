@@ -14,6 +14,7 @@ public class CelojumuPage {
     private final SelenideElement CELOJUMA_GALAMERKIS_FIELD = $x(".//button[@id = 'regionalSelectorRegion-open']/span[2]");
     private final SelenideElement IZVELIES_VALSTI_BTN = $("#regionalSelectorCountry");
     private final SelenideElement PIEVIENOT_VALSTI_BTN = $x(".//span[@class = 'text add-text']");
+    private final SelenideElement SEARCH_FIELD = $x(".//div[@class = 'field']/div[1]/input");
     private final SelenideElement INDIJA = $x(".//button[@data-value = 'Indija']");
     private final SelenideElement PIELIETOT_BTN = $("#regionalSelectorCountry-applyButton");
     private final SelenideElement AKTIVITATES_FIELD = $("#travelActivities-open");
@@ -50,7 +51,7 @@ public class CelojumuPage {
         LOGGER.info("Typing Indija and clicking on the found");
 
         PIEVIENOT_VALSTI_BTN.click();
-        PIEVIENOT_VALSTI_BTN.setValue("Indija");
+        SEARCH_FIELD.setValue("Indija");
     }
 
     public void clickOnIndija() {
@@ -59,30 +60,41 @@ public class CelojumuPage {
         INDIJA.click();
     }
 
-//       public void clickOnPielietotBtn() {
-//           LOGGER.info("Looking for the Pielietot button to click on it")
-//           baseFunction.click(PIELIETOT_BTN);
-//
-//       public void lookingForAktivitatesField() {
-//           LOGGER.info("Looking for Aktivitates field to click on it")
-//           baseFunction.click(AKTIVITATES_FIELD);
-//
-//       public void lookingForSportsBtn() {
-//           LOGGER.info("Looking for Aktivitates field to click on it")
-//           baseFunction.click(SPORTS_PAGE);
-//
-//       public void loogingForSanemtPiedavajumuBtn() {
-//           LOGGER.info("Looking for Sanemt Piedavajumu button to click on it")
-//           baseFunction.click(SANEMT_PIEDAVAJUMU_BTN);
-//
-//       public String getSelectedCountryText() {
-//           LOGGER.info("Looking for the Selected Country")
-//           return baseFunction.driver.findElement(SELECTED_COUNTRY).getText();
-//
-//       public String getSelectedAktivitateText() {
-//           LOGGER.info("Looking for the Selected Aktivitate")
-//           return baseFunction.driver.findElement(SELECTED_AKTIVITATE).getText();
-//       }
+    public void clickOnPielietotBtn() {
+        LOGGER.info("Looking for the Pielietot button to click on it");
+
+        PIELIETOT_BTN.click();
+    }
+
+    public void lookingForAktivitatesField() {
+        LOGGER.info("Looking for Aktivitates field to click on it");
+
+        AKTIVITATES_FIELD.click();
+    }
+
+    public void lookingForSportsBtn() {
+        LOGGER.info("Looking for Aktivitates field to click on it");
+
+        SPORTS_PAGE.click();
+    }
+
+    public void loogingForSanemtPiedavajumuBtn() {
+        LOGGER.info("Looking for Sanemt Piedavajumu button to click on it");
+
+        SANEMT_PIEDAVAJUMU_BTN.click();
+    }
+
+    public String getSelectedCountryText() {
+        LOGGER.info("Looking for the Selected Country");
+
+        return SELECTED_COUNTRY.getText();
+    }
+
+    public String getSelectedAktivitateText() {
+        LOGGER.info("Looking for the Selected Aktivitate");
+
+        return SELECTED_AKTIVITATE.getText();
+    }
 }
 
 
