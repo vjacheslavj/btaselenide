@@ -32,5 +32,13 @@ public class TestBta {
         celojumuPage.lookingForSportsBtn();
         String selectedAktivitate = celojumuPage.getSelectedAktivitateText();
         celojumuPage.loogingForSanemtPiedavajumuBtn();
+
+        IzveliesProgrammuPage izveliesProgrammuPage = new IzveliesProgrammuPage();
+        izveliesProgrammuPage.scrollDownCelojumaPage();
+        izveliesProgrammuPage.lookingForOptimalPlussBtn();
+        izveliesProgrammuPage.lookingForKasIrApdrosBtn();
+        boolean isPopupWindowDisplayed = izveliesProgrammuPage.isPopupWindowDisplayed();
+        izveliesProgrammuPage.lookingForCloseBtn();
+        izveliesProgrammuPage.lookingForTurpinatBtn();
     }
 }
